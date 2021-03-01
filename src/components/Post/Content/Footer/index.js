@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, Image, StyleSheet,TouchableWithoutFeedback} from 'react-native';
+import {Text, View, Image, StyleSheet,TouchableWithoutFeedback,Alert} from 'react-native';
 import  Icon  from 'react-native-vector-icons/AntDesign';
 import Comicon from 'react-native-vector-icons/Fontisto';
 import Share from 'react-native-vector-icons/Feather';
@@ -10,11 +10,18 @@ const Footer = ({likesCount,caption,postedAt}) => {
     const [count, setCount] = useState(likesCount);
     const [mark,setMark]  = useState(false)
     const onLike = () => {
+        
         setIsLike(!isLike);
         const value = isLike? 0 : + 1
         setCount(likesCount + value);
     };
     const onMark = () => {
+        mark?
+        Alert.alert(
+            "Hủy dấu trang",
+          ): Alert.alert(
+            "Gắn dấu trang",
+          )
         setMark(!mark)
     }
     
