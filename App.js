@@ -32,7 +32,7 @@ const App = () => {
               component={HomeScreen}
               renderTitle={({props}) =>
               <View style={{flexDirection:'row', justifyContent: 'space-between', width:"100%",padding: 5}}>
-                <Image source={require('./images/logo.png')} style={{height: 37, width:'36%'}}/>
+                <Image source={require('./images/logo.png')} style={{height: 38, width:'36%'}}/>
                 <Icon name="facebook-messenger" size={30}/>
               </View> }
               icon={({ focused }) => (
